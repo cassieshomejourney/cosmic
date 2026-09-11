@@ -11,15 +11,22 @@ config_version=5
 [application]
 
 config/name="Cosmic audio"
+run/main_scene="uid://ds4gduf8660uj"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-MpfGmc="*uid://c05iybd1a77mc"
+MPF="*uid://c05iybd1a77mc"
 
 [display]
 
+window/size/initial_position_type=0
+window/size/resizable=false
+window/size/borderless=true
+window/size/window_width_override=1148
+window/size/window_height_override=648
+window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
