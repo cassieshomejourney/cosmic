@@ -1,1 +1,77 @@
 #config_version=6
+
+switches:
+  s_trough_jam:
+    number: 01
+  s_trough1:
+    number: 02
+  s_trough2:
+    number: 03
+  s_trough3:
+    number: 04
+  s_trough4:
+    number: 05
+  s_start:
+    number: 06
+  s_left_flipper:
+    number: 07
+  s_right_flipper:
+    number: 3208-0
+  s_shooter_lane:
+    number: 09
+#slingshot switches
+  s_right_sling1:
+    number: 10
+  s_right_sling2:
+    number: 11
+  s_left_sling1:
+    number: 12
+  s_left_sling2:
+    number: 13
+#inlanes and outlanes
+  s_left_outlane:
+    number: 14
+  s_left_inlane:
+    number: 15
+  s_right_inlane:
+    number: 16
+  s_right_outlane:
+    number: 17
+#pop bumper by lower left
+  s_pop_bumper_lower_left:
+    number: 18
+
+coils:
+  c_left_flipper:
+    number: banana
+    default_pulse_ms: 25
+    default_hold_power: .35
+
+
+
+
+
+
+# MAJOR PIECES
+# - Code Repository / version control: Git
+#   - Used for backing up your project files and settings,
+#     also sharing with other people. You make changes on your
+#     local file system, then "commit" those changes to Git.
+#   - Permissions and high-level management are done via github
+#     (website)
+#   - Commits and basic file stuff can be handled in your IDE
+#     (Integrated Development Environment)
+# - IDE: VS Code or Pulsar. Essentially fancy text editors;
+#     Glorified big siblings of Notepad. You'll write most of your
+#     cone and config files in one of these apps. Choose one and
+#     sitck with it.
+#   - You can also do your Git commits in your IDE.
+# - Media Manager: Godot
+#   - Manages sounds, videos, and keyboard input.
+# - Command prompt: Built-in Windows feature.
+#   - Used for launching MPF. Syntax:
+#   "Command" to open Command prompt
+#   "cd Desktop\cosmic" to change working directory to your
+#     working folder.
+#   "mpf -b" to launch MPF. This will evolve as your project
+#     progresses.
