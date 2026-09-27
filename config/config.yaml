@@ -45,7 +45,8 @@ coils:
   c_left_flipper:
     number: banana
     default_pulse_ms: 25
-    default_hold_power: .35
+    default_hold_power:
+u0o
 
 
 

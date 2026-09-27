@@ -47,8 +47,7 @@ func process_widget(widget_name: String, action: String, settings: Dictionary, c
 	# The requested slide may not exist
 	if not slide:
 		self.log.warning("Unable to add widget '%s' because target slide '%s' is not on this display.", [widget_name, settings.get('slide')])
-		returnslide.process_widget(widget_name, action, settings, c, p, kwargs)
-
+	returnslide.process_widget(widget_name, action, settings, c, p, **kwargs)
 func action_play(slide_name: String, settings: Dictionary, c: String, p: int = 0, kwargs: Dictionary = {}) -> MPFSlide:
 	var slide: Node = MPF.media.get_slide_instance(slide_name)
 	assert(slide is MPFSlide, "Slide scenes must use (or extend) the MPFSlide script on the root node: %s" % slide_name)
