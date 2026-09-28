@@ -1,0 +1,44 @@
+2026-09-11 18:02:33,890 : INFO : root : Loading config.
+2026-09-11 18:02:33,906 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2026-09-11 18:02:33,906 : INFO : ConfigProcessor : Loading config from cache: C:\Users\CASSAF~1\AppData\Local\Temp\1bfff863d3b7db8047f935fe5b7291be.mpf_cache
+2026-09-11 18:02:33,983 : INFO : ConfigProcessor : Loading config from cache: C:\Users\CASSAF~1\AppData\Local\Temp\9f50a0008d623fa23ea893091e201484.mpf_cache
+2026-09-11 18:02:33,993 : INFO : ConfigProcessor : Loading config from cache: C:\Users\CASSAF~1\AppData\Local\Temp\2fd029c1f0678dc310e3ec07efc83a20.mpf_cache
+2026-09-11 18:02:34,005 : INFO : Machine : Mission Pinball Framework Core Engine v0.80.0
+2026-09-11 18:02:34,005 : INFO : Machine : Command line arguments: {'no_load_cache': False, 'create_config_cache': True, 'bcp': False, 'configfile': ['config.yaml'], 'force_assets_load': False, 'platform_integration_test': False, 'jsonlogging': False, 'logfile': 'logs\\2026-09-11-18-02-33-mpf-Cassie.log', 'pause': False, 'production': False, 'text_ui': True, 'loglevel': 15, 'consoleloglevel': 20, 'force_platform': None, 'syslog_address': None, 'full_logfile_path': 'C:\\Users\\cassafrass\\Desktop\\cosmic\\logs\\2026-09-11-18-02-33-mpf-Cassie.log'}
+2026-09-11 18:02:34,005 : INFO : Machine : MPF path: C:\Users\cassafrass\AppData\Local\Programs\Python\Python313\Lib\site-packages\mpf
+2026-09-11 18:02:34,005 : INFO : Machine : Machine path: C:\Users\cassafrass\Desktop\cosmic
+2026-09-11 18:02:34,005 : INFO : Machine : Platform: win32
+2026-09-11 18:02:34,005 : INFO : Machine : Python executable location: C:\Users\cassafrass\AppData\Local\Programs\Python\Python313\python.exe
+2026-09-11 18:02:34,005 : INFO : Machine : Python version: 3.13.15 (64-bit)
+2026-09-11 18:02:34,006 : INFO : Machine : Initializing MPF...
+2026-09-11 18:02:34,168 : INFO : EventManager : Event: ======'machine_var_credits_string'====== Args={'value': 'FREE PLAY', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,187 : INFO : EventManager : Event: ======'machine_var_master_volume'====== Args={'value': 0.5, 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,187 : INFO : EventManager : Event: ======'machine_var_mpf_version'====== Args={'value': 'Mission Pinball Framework v0.80.0', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,188 : INFO : EventManager : Event: ======'machine_var_mpf_extended_version'====== Args={'value': 'Mission Pinball Framework v0.80.0, Config version:6, Show version: 6, BCP version:1.1', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,188 : INFO : EventManager : Event: ======'machine_var_python_version'====== Args={'value': '3.13.15', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,298 : INFO : EventManager : Event: ======'machine_var_platform'====== Args={'value': 'Windows-11-10.0.26200-SP0', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,298 : INFO : EventManager : Event: ======'machine_var_platform_system'====== Args={'value': 'Windows', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,298 : INFO : EventManager : Event: ======'machine_var_platform_release'====== Args={'value': '11', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,298 : INFO : EventManager : Event: ======'machine_var_platform_version'====== Args={'value': '10.0.26200', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,298 : INFO : EventManager : Event: ======'machine_var_platform_machine'====== Args={'value': 'AMD64', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,298 : INFO : EventManager : Event: ======'machine_var_log_file_path'====== Args={'value': 'C:\\Users\\cassafrass\\Desktop\\cosmic\\logs\\2026-09-11-18-02-33-mpf-Cassie.log', 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,298 : INFO : EventManager : Event: ======'init_phase_1'====== Args={}
+2026-09-11 18:02:34,305 : INFO : EventManager : Event: ======'init_phase_2'====== Args={}
+2026-09-11 18:02:34,310 : INFO : EventManager : Event: ======'init_phase_3'====== Args={}
+2026-09-11 18:02:34,311 : INFO : EventManager : Event: ======'init_phase_4'====== Args={}
+2026-09-11 18:02:34,312 : INFO : EventManager : Event: ======'machine_var_audits_events_game_started'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,312 : INFO : EventManager : Event: ======'machine_var_audits_events_game_ended'====== Args={'value': 0, 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,312 : INFO : EventManager : Event: ======'machine_var_audits_player_score'====== Args={'value': {'top': [], 'average': 0, 'total': 0}, 'prev_value': None, 'change': True}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'init_phase_5'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'init_done'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'machine_reset_phase_1'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'machine_reset_phase_2'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'machine_reset_phase_3'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'reset_complete'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'mode_attract_will_start'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'mode_attract_starting'====== Args={}
+2026-09-11 18:02:34,313 : INFO : Mode.attract : Started. Priority: 10
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'modes_active_modes_changed'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'mode_attract_started'====== Args={}
+2026-09-11 18:02:34,313 : INFO : EventManager : Event: ======'collecting_balls_complete'====== Args={}
+2026-09-11 18:02:34,314 : INFO : Machine : Starting the main run loop with active modes: [<Mode.attract>]
