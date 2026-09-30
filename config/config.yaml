@@ -1,48 +1,52 @@
 #config_version=6
 
-switches:
-  s_trough_jam:
-    number: 01
+sswitches:
   s_trough1:
-    number: 02
+    number: 2
+    type: NC
   s_trough2:
-    number: 03
+    number: 3
+    type: NC
   s_trough3:
-    number: 04
+    number: 4
+    type: NC
   s_trough4:
-    number: 05
-  s_start:
-    number: 06
-  s_left_flipper:
-    number: 07
-  s_right_flipper:
-    number: 3208-0
-  s_shooter_lane:
-    number: 09
-#slingshot switches
-  s_right_sling1:
+    number: 5
+    type: NC
+  s_trough5:
+    number: 6
+    type: NC
+  s_trough6:
+    number: 7
+    type: NC
+  s_trough_jam:
+    number: 8
+    type: NC
+  s_plunger:
     number: 10
-  s_right_sling2:
-    number: 11
-  s_left_sling1:
-    number: 12
-  s_left_sling2:
-    number: 13
-#inlanes and outlanes
-  s_left_outlane:
-    number: 14
-  s_left_inlane:
-    number: 15
-  s_right_inlane:
-    number: 16
-  s_right_outlane:
-    number: 17
-#pop bumper by lower left
-  s_pop_bumper_lower_left:
-    number: 18
+
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 coils:
-  c_left_flipper:
-    number: banana
-    default_pulse_ms: 25
-    default_hold_power: .35
+  c_trough_eject:
+    number: 4
+    default_pulse_ms: 20
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 3s
+  bd_plunger:
+    ball_switches: s_plunger
+    mechanical_eject: true
+    eject_timeouts: 5s
+
+playfields:
+  playfield:
+    default_source_device: bd_plunger
+    tags: default
