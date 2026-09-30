@@ -1,6 +1,6 @@
 #config_version=6
 
-sswitches:
+switches:
   s_trough1:
     number: 2
     type: NC
