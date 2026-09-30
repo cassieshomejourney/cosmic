@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Cosmic"
+config/name="Galaxy"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -22,10 +22,6 @@ MPF="*uid://c05iybd1a77mc"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-
-[editor_plugins]
-
-enabled=PackedStringArray()
 
 [physics]
 
