@@ -1,4 +1,51 @@
 #config_version=6
+flippers:
+  lower_left:
+    main_coil:
+    hold_coil:
+    activation_switch:
+    eos_switch:
+    label:
+  lower_right:
+    main_coil:
+    hold_coil:
+    activation_switch:
+    eos_switch:
+    label:
+  upper_left:
+    main_coil:
+    hold_coil:
+    activation_switch:
+    eos_switch:
+    label:
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam,
+    eject_coil: c_trough_eject
+    tags: trough, home, drain
+    jam_switch: s_trough_jam
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 3s
+  bd_plunger:
+    ball_switches: s_plunger
+    mechanical_eject: true
+    eject_timeouts: 5s
+  bd_scoop:
+    ball_switches: c_scoop
+    eject_coil: c_scoop
+    mechanical_eject: true
+    eject_timeouts: 1s
+  bd_lock:
+    ball_switches: s_lock1, s_lock2, s_lock3
+    eject_coil: c_lock
+    eject_all_events:
+#   eject_timeouts: 1s
+  bd_lock2:
+    ball_switches: d_lock4, d_lock5, d_lock6
+    eject_coil: d_lock
+    eject_all_events:
+#   eject_timeouts: 1s
 
 switches:
   s_trough1:
@@ -24,45 +71,100 @@ switches:
     type: NC
   s_plunger:
     number: 10
+  s_moon1_sling:
+    number: 11
+    type: NC
+  s_moon2_sling:
+    number: 12
+    type: NC
+  s_moon3_sling:
+    number: 13
+    type: NC
+  s_moon4_sling:
+    number: 14
+    type: NC
+  s_popbumperleft:
+    number: 15
+    type: NC
+  s_popbumperleft2:
+    number: 16
+    type: NC
+  s_popbumbperright:
+    number: 17
+    type: NC
+  s_popbumperright2:
+    number: 18
+    type: NC
 
-virtual_platform_start_active_switches:
-  s_trough1:
-  s_trough2:
-  s_trough3:
-  s_trough4:
-  s_trough5:
-  s_trough6:
+virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
 
 coils:
   c_trough_eject:
     number: 4
     default_pulse_ms: 20
+  c_scoop:
+    number: 5
+    default_pulse_ms: 12
+  c_lock:
+    number: 6
+    default_pulse_ms: 12
+  d_lock:
+    number: 7
+    default_pulse_ms: 12
+  c_moon7_sling:
+    number: 8
+    default_pulse_ms: 10
+  c_moon8_sling:
+    number: 9
+    default_pulse_ms: 10
+  c_moon5_sling:
+    number: 10
+    default_pulse_ms: 10
+  c_moon6_sling:
+    number: 11
+    default_pulse_ms: 10
+  c_popbumperleft:
+    number: 12
+    default_pulse_ms: 23
+  c_popbumperleft2:
+    number: 13
+    default_pulse_ms: 23
+  c_popbumperright:
+    number: 14
+    default_pulse_ms: 23
+  c_popbumperright2:
+    number: 15
+    default_pulse_ms: 23
 
-ball_devices:
-  bd_trough:
-    ball_switches:
-    s_trough1:
-    s_trough2:
-    s_trough3:
-    s_trough4:
-    s_trough5:
-    s_trough6:
-
-    s_trough_jam:
-    eject_coil: c_trough_eject
-    tags: trough, home, drain
-
-    jam_switch: s_trough_jam
-    eject_coil_jam_pulse: 15ms
-    eject_targets: bd_plunger
-
-    eject_timeouts: 3s
-  bd_plunger:
-    ball_switches: s_plunger
-    mechanical_eject: true
-    eject_timeouts: 5s
-
+autofire_coils:
+  c_moon8_sling:
+    coil: c_moon8_sling
+    switch: s_moon1_sling
+  c_moon7_sling:
+    coil: c_moon7_sling
+    switch: s_moon2_sling
+  c_moon5_sling:
+    coil: c_moon5_sling
+    switch: s_moon3_sling
+  c_moon6_sling_sling:
+    coil: c_moon5_sling
+    switch: s_moon4_sling
+  ac_popbumper_left:
+    coil: c_popbumperleft
+    switch: s_popbumperleft
+  ac_popbumper_left2:
+    coil: c_popbumperleft2
+    switch: s_popbumperleft2
+  ac_popbumper_right:
+    coil: c_popbumperright
+    switch: s_popbumbperright
+  ac_popbumper_right2:
+    coil: c_popbumperright2
+    switch: s_popbumperright2
 playfields:
-  playfields:
-    default_source_device: bd_plunger
+  playfield:
     tags: default
+    default_source_device: bd_plunger
+    enable_ball_search: true
+    ball_search_timeout: 15ms
+    ball_search_wait_after_iteration: 250ms
