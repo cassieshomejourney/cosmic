@@ -95,9 +95,22 @@ switches:
   s_popbumperright2:
     number: 18
     type: NC
-
+  s_smallramp_entry:
+    number: 1
+  s_smallramp_success:
+    number: 2
+  s_largeramp_entry:
+    number: 3
+  s_largeramp_success:
+    number: 4
+sequence_shots:
+  smallramp:
+    switch_sequence: s_smallramp_entry, s_smallramp_success
+    sequence_timeout: 3s
+  largeramp:
+    switch_sequence: s_largeramp_entry, s_largeramp_success
+    sequence_timeout: 3s
 virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
-
 coils:
   c_trough_eject:
     number: 4
@@ -137,16 +150,16 @@ coils:
     default_pulse_ms: 23
 
 autofire_coils:
-  c_moon8_sling:
+  ac_moon8_sling:
     coil: c_moon8_sling
     switch: s_moon1_sling
-  c_moon7_sling:
+  ac_moon7_sling:
     coil: c_moon7_sling
     switch: s_moon2_sling
-  c_moon5_sling:
+  ac_moon5_sling:
     coil: c_moon5_sling
     switch: s_moon3_sling
-  c_moon6_sling_sling:
+  ac_moon6_sling:
     coil: c_moon5_sling
     switch: s_moon4_sling
   ac_popbumper_left:
