@@ -41,12 +41,12 @@ ball_devices:
     eject_coil: c_lock
     eject_all_events:
 #   eject_timeouts: 1s
-bd_lock2:
+  bd_lock2:
     ball_switches: d_lock4, d_lock5, d_lock6
     eject_coil: d_lock
     eject_all_events:
 #   eject_timeouts: 1s
-bd_backfire_hole:
+  bd_backfire_hole:
     ball_switches: s_backfire_hole
     eject_coil: c_backfire_hole
     eject_coil_retry_pulse: 15s
@@ -98,9 +98,18 @@ switches:
   s_popbumperright2:
     number: 18
     type: NC
-  s_backfire_hole
+ s_backfire_hole
     number: 19
-    type: NC
+  start:
+    number: 20
+    tags: start
+  plumbbob:
+    number: 21
+    tags: tilt
+  shooter_lane:
+    number: 22
+    events_when_activated: ball_in
+    events_when_deactivated: ball_out
   s_smallramp_entry:
     number: 1
   s_smallramp_success:
@@ -109,6 +118,8 @@ switches:
     number: 3
   s_largeramp_success:
     number: 4
+  s_scoop:
+    number: 5
 sequence_shots:
   smallramp:
     switch_sequence: s_smallramp_entry, s_smallramp_success
@@ -157,6 +168,9 @@ coils:
   c_backfire_hole:
     number: 1-0-4
     default_pulse_ms: 6
+  c_scoop_eject:
+    number: 4
+    default_pulse_ms: 20
 autofire_coils:
   ac_moon8_sling:
     coil: c_moon8_sling
