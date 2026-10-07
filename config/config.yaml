@@ -18,6 +18,16 @@ flippers:
     activation_switch:
     eos_switch:
     label:
+ball_saves:
+  default:
+    active_time: 10s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: mode_base_started
+    timer_start_events: balldevice_plunger_lane_ball_eject_success
+    auto_launch: true
+    balls_to_save: 3
+    debug: true
 ball_devices:
   bd_trough:
     ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam,
@@ -98,7 +108,7 @@ switches:
   s_popbumperright2:
     number: 18
     type: NC
- s_backfire_hole
+  s_backfire_hole:
     number: 19
   start:
     number: 20
