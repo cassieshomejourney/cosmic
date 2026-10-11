@@ -1,36 +1,26 @@
 #config_version=6
 flippers:
   lower_left:
-    main_coil:
-    hold_coil:
-    activation_switch:
-    eos_switch:
+    main_coil: 
+    hold_coil: 
+    activation_switch: 
+    eos_switch: 
     label:
   lower_right:
-    main_coil:
-    hold_coil:
-    activation_switch:
-    eos_switch:
-    label:
+    main_coil: 
+    hold_coil: 
+    activation_switch: 
+    eos_switch: 
+    label:   
   upper_left:
-    main_coil:
-    hold_coil:
-    activation_switch:
-    eos_switch:
+    main_coil: 
+    hold_coil: 
+    activation_switch: 
+    eos_switch: 
     label:
-ball_saves:
-  default:
-    active_time: 10s
-    hurry_up_time: 2s
-    grace_period: 2s
-    enable_events: mode_base_started
-    timer_start_events: balldevice_plunger_lane_ball_eject_success
-    auto_launch: true
-    balls_to_save: 3
-    debug: true
 ball_devices:
   bd_trough:
-    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam,
+    ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam, 
     eject_coil: c_trough_eject
     tags: trough, home, drain
     jam_switch: s_trough_jam
@@ -56,10 +46,7 @@ ball_devices:
     eject_coil: d_lock
     eject_all_events:
 #   eject_timeouts: 1s
-  bd_backfire_hole:
-    ball_switches: s_backfire_hole
-    eject_coil: c_backfire_hole
-    eject_coil_retry_pulse: 15s
+    
 switches:
   s_trough1:
     number: 2
@@ -108,36 +95,9 @@ switches:
   s_popbumperright2:
     number: 18
     type: NC
-  s_backfire_hole:
-    number: 19
-  start:
-    number: 20
-    tags: start
-  plumbbob:
-    number: 21
-    tags: tilt
-  shooter_lane:
-    number: 22
-    events_when_activated: ball_in
-    events_when_deactivated: ball_out
-  s_smallramp_entry:
-    number: 1
-  s_smallramp_success:
-    number: 2
-  s_largeramp_entry:
-    number: 3
-  s_largeramp_success:
-    number: 4
-  s_scoop:
-    number: 5
-sequence_shots:
-  smallramp:
-    switch_sequence: s_smallramp_entry, s_smallramp_success
-    sequence_timeout: 3s
-  largeramp:
-    switch_sequence: s_largeramp_entry, s_largeramp_success
-    sequence_timeout: 3s
+
 virtual_platform_start_active_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6
+
 coils:
   c_trough_eject:
     number: 4
@@ -175,23 +135,18 @@ coils:
   c_popbumperright2:
     number: 15
     default_pulse_ms: 23
-  c_backfire_hole:
-    number: 1-0-4
-    default_pulse_ms: 6
-  c_scoop_eject:
-    number: 4
-    default_pulse_ms: 20
+
 autofire_coils:
-  ac_moon8_sling:
+  c_moon8_sling:
     coil: c_moon8_sling
     switch: s_moon1_sling
-  ac_moon7_sling:
+  c_moon7_sling:
     coil: c_moon7_sling
     switch: s_moon2_sling
-  ac_moon5_sling:
+  c_moon5_sling:
     coil: c_moon5_sling
     switch: s_moon3_sling
-  ac_moon6_sling:
+  c_moon6_sling_sling:
     coil: c_moon5_sling
     switch: s_moon4_sling
   ac_popbumper_left:
@@ -208,7 +163,7 @@ autofire_coils:
     switch: s_popbumperright2
 playfields:
   playfield:
-    tags: default
+    tags: default 
     default_source_device: bd_plunger
     enable_ball_search: true
     ball_search_timeout: 15ms

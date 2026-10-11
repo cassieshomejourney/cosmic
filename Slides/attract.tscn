@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bpvflcvlv42lc"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_gn7hw"]
+[ext_resource type="Script" uid="uid://bov7mrgxslshq" path="res://addons/mpf-gmc/classes/mpf_video_player.gd" id="2_ot8dc"]
+[ext_resource type="FontFile" uid="uid://dxrsi8mvjs58g" path="res://After Burner Neue.ttf" id="3_vvcpf"]
+[ext_resource type="FontFile" uid="uid://cmfop1ti1hr05" path="res://RetroSignature.otf" id="4_ktmna"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_vvcpf"]
+file = "res://Galaxy-in-4K-Animation-Overlay-for-Edits-Motion-Background-Free.ogv"
+
+[node name="attract" type="Control" unique_id=1948280644]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1.0
+offset_bottom = 1.0
+script = ExtResource("1_gn7hw")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="MPFVideoPlayer" type="VideoStreamPlayer" parent="." unique_id=756973618]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stream = SubResource("VideoStreamTheora_vvcpf")
+autoplay = true
+script = ExtResource("2_ot8dc")
+metadata/_custom_type_script = "uid://bov7mrgxslshq"
+metadata/attract = false
+
+[node name="Label" type="Label" parent="MPFVideoPlayer" unique_id=1046533737]
+layout_mode = 0
+offset_left = 631.0
+offset_top = 165.0
+offset_right = 1317.0
+offset_bottom = 821.0
+theme_override_fonts/font = ExtResource("3_vvcpf")
+theme_override_font_sizes/font_size = 85
+text = " C O S M I C
+"
+vertical_alignment = 1
+metadata/attract = false
+metadata/attract1 = false
+metadata/attract3 = false
+
+[node name="Label" type="Label" parent="MPFVideoPlayer/Label" unique_id=1254539919]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 317.0
+offset_right = 118.0
+offset_bottom = 834.0
+theme_override_colors/font_color = Color(0.56637895, 0.9592642, 0.06380788, 1)
+theme_override_fonts/font = ExtResource("4_ktmna")
+theme_override_font_sizes/font_size = 90
+text = "H
+A
+O
+S"

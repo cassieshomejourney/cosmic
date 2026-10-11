@@ -11,17 +11,34 @@ config_version=5
 [application]
 
 config/name="Galaxy"
+run/main_scene="res://Slides/window_override.TSCN"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-MPF="*uid://c05iybd1a77mc"
+MPF="*res://addons/mpf-gmc/mpf_gmc.gd"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/initial_position_type=0
+window/size/resizable=false
+window/size/borderless=true
+window/size/window_width_override=1148
+window/size/window_height_override=648
+window/subwindows/embed_subwindows=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor]
+
+run/main_run_args="gmc"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/mpf-gmc/plugin.cfg")
 
 [physics]
 

@@ -1,2 +1,2 @@
 # cosmic
-Explore the galaxy
+Explor the galaxy
